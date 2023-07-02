@@ -13,4 +13,4 @@ const init = async () => {
     console.log(products);
 }
 
-window.addEventListener("DOMContentLoaded", init)
+window.addEventListener("DOMContentLoaded", init);
