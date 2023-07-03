@@ -19,8 +19,8 @@ const getStorageItem = (item) => {
     storageItem = JSON.parse(localStorage.getItem(item));
   } else {
     storageItem = [];
-    return storageItem;
   }
+  return storageItem;
 };
 const setStorageItem = (name, item) => {
   localStorage.setItem(name, JSON.stringify(item));

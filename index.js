@@ -5,15 +5,15 @@ import './src/cart/setupCart.js';
 // specific imports
 import fetchProducts from './src/fetchProducts.js';
 import  {findProduct, setupStore, store} from './src/store.js';
-//import display from './src/displayProducts.js';
-//import { getElement } from './src/utils.js';
+import { getElement } from './src/utils.js';
+import display from './src/displayProducts.js';
 
 const init = async () => {
     const products = await fetchProducts();
     if(products) {
         setupStore(products);
         const featured = store.filter((product) => findProduct.featured === true);
-        console.log(featured);
+        display(featured, getElement('.featured-center'))
     }
 }
 
