@@ -1,6 +1,7 @@
 import { formatPrice } from './utils.js';
 import { addToCart } from './cart/setupCart.js';
 const display = (products, element) => {
+  // display products
     element.innerHTML = products.map((product)=> {
         const {id, name, image, price} = product;
         return ` <article class="product">
@@ -21,7 +22,7 @@ const display = (products, element) => {
           <h4 class="product-price">$9.99</h4>
         </footer>
       </article>`
-    });
+    }).join('');
 };
 
 export default display;
