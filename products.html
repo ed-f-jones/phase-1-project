@@ -130,7 +130,22 @@
 <!-- products-->
 <section class="products">
     <div class="filters">
+      <div class="filters-container">
+        <!-- search -->
+        <form class="input-form" placeholder="search...">
 
+        </form>
+        <!-- categories -->
+        <h4>Company</h4>
+        <article class="companies">
+          <button class="company-btn">all</button>
+          <button class="company-btn">ikea</button>
+        </article>
+        <!-- price -->
+        <form class="price-form">
+          <input type="range" class="price-filter" min="0" max="100" value="50">
+        </form>
+      </div>
     </div>
     <div class="products-container">
 
@@ -138,5 +153,8 @@
     <script type="module" src="./src/pages/products.js"></script>
 </section>
 <!-- page loading -->
+<div class="page-loading">
+  <h2>Loading...</h2>
+</div>
 </body>
 </html>
