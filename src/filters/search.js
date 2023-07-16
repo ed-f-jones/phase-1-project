@@ -7,9 +7,13 @@ const setupSearch = (store) => {
         const value = nameInput.value
         if (value) {
             const newStore = store.filter((product)=> {
-                let name = product;
-                console.log(name);
-            })
+                let { name } = product;
+                name = name.toLowercase();
+                if (name.startsWith(value)) {
+                    return product
+                }
+            });
+            console.log(newStore);
         } else {
             display(store,getElement('.products-container'));
         }
