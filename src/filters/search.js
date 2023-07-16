@@ -5,6 +5,14 @@ const setupSearch = (store) => {
     const nameInput = getElement('.search-input');
     form.addEventListener("keyup", function(){
         const value = nameInput.value
+        if (value) {
+            const newStore = store.filter((product)=> {
+                let name = product;
+                console.log(name);
+            })
+        } else {
+            display(store,getElement('.products-container'));
+        }
     });
 };
 
