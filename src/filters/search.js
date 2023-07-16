@@ -8,14 +8,15 @@ const setupSearch = (store) => {
         if (value) {
             const newStore = store.filter((product)=> {
                 let { name } = product;
-                name = name.toLowercase();
+                name = name.toLowerCase();
                 if (name.startsWith(value)) {
                     return product
                 }
             });
             console.log(newStore);
+            display(newStore, getElement('.products-container'));
         } else {
-            display(store,getElement('.products-container'));
+            display(store, getElement('.products-container'));
         }
     });
 };
